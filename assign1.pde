@@ -68,7 +68,7 @@ void draw() {
       int randS1 = int(random(6));
       int randS2 = int(random(6));
       
-      if ( i = 0.1){
+      if ( i = 1){
       machine.setSlotFruit(0, 0);
       machine.setSlotFruit(1, 0);
       machine.setSlotFruit(2, 0);
