@@ -74,8 +74,8 @@ void draw() {
       machine.setSlotFruit(2, 0);
       }else{
       machine.setSlotFruit(0, randS0);
-      machine.setSlotFruit(0, randS1);
-      machine.setSlotFruit(0, randS2);
+      machine.setSlotFruit(1, randS1);
+      machine.setSlotFruit(2, randS2);
       }
       
       int a = machine.getFruitcount(0);
