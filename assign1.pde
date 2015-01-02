@@ -62,47 +62,37 @@ void draw() {
       // stop rolling
       // -------------------------------------------------
       // put your code inside here
-      int slotScore0 = -1 ;
-      int slotScore1 = -1 ;
-      int slotScore2 = -1 ;
-      float p0 = 0.4641588;
-      float p1 = 0.4641588;
-      float p2 = 0.4641588;
-      if( machine.probability(p0) == 1){
-        machine.setSlotFruit( 0, 0);
-        slotScore0 = 0;       
+      
+      int i = machine.probability(0.1);
+      int randS0 = int(random(6));
+      int randS1 = int(random(6));
+      int randS2 = int(random(6));
+      
+      if ( i = 0.1){
+      machine.setSlotFruit(0, 0);
+      machine.setSlotFruit(1, 0);
+      machine.setSlotFruit(2, 0);
+      }else{
+      machine.setSlotFruit(0, randS0);
+      machine.setSlotFruit(0, randS1);
+      machine.setSlotFruit(0, randS2);
       }
-      else{
-        slotScore0 = int(random(5))+1;
-        machine.setSlotFruit( 0, slotScore0 );
-      }
-      if (machine.probability(p1) == 1){
-        machine.setSlotFruit( 1, 0);
-        slotScore1 = 0;
-      }
-      else{
-        slotScore1 = int(random(5))+1;
-        machine.setSlotFruit( 1, slotScore1 );
-      }
-      if (machine.probability(p2) == 1){
-        machine.setSlotFruit( 2, 0);
-        slotScore2 = 0;
-      }
-      else{
-        slotScore2 = int(random(5))+1;
-        machine.setSlotFruit( 1, slotScore2 );
-      }
-      totalScore = totalScore
-                 + machine.getSlotScore(slotScore0)
-                 + machine.getSlotScore(slotScore1)
-                 + machine.getSlotScore(slotScore2);
-
-      for (int fid = 0; fid <6; fid++) {       
-        int count = machine.getFruitCount(fid);
-        if (count>=2) {
-          totalScore = totalScore + machine.getSlotScore(fid)
-            *(count-1)*count;
-        }
+      
+      int a = machine.getFruitcount(0);
+      int b = machine.getFruitcount(1);
+      int c = machine.getFruitcount(2);
+      int d = machine.getFruitcount(3);
+      int e = machine.getFruitcount(4);
+      int f = machine.getFruitcount(5);
+    
+      totalScore = totalScore 
+                 + a*a*60
+                 + b*b*10
+                 + c*c*20
+                 + d*d*30
+                 + e*e*40
+                 + f*f*50;
+      
         // -------------------------------------------------
       }
     }
