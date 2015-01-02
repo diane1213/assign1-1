@@ -68,7 +68,7 @@ void draw() {
       int randS1 = int(random(6));
       int randS2 = int(random(6));
       
-      if ( i = 1){
+      if ( i == 1){
       machine.setSlotFruit(0, 0);
       machine.setSlotFruit(1, 0);
       machine.setSlotFruit(2, 0);
@@ -78,12 +78,12 @@ void draw() {
       machine.setSlotFruit(2, randS2);
       }
       
-      int a = machine.getFruitcount(0);
-      int b = machine.getFruitcount(1);
-      int c = machine.getFruitcount(2);
-      int d = machine.getFruitcount(3);
-      int e = machine.getFruitcount(4);
-      int f = machine.getFruitcount(5);
+      int a = machine.getFruitCount(0);
+      int b = machine.getFruitCount(1);
+      int c = machine.getFruitCount(2);
+      int d = machine.getFruitCount(3);
+      int e = machine.getFruitCount(4);
+      int f = machine.getFruitCount(5);
     
       totalScore = totalScore 
                  + a*a*60
@@ -101,7 +101,7 @@ void draw() {
     textSize(19);
     text("Roll", x, y);
   }
-}
+  
 // When the mouse is pressed, the state of the button is toggled.   
 void mousePressed() {
   if (mouseX > x-w/2 && mouseX < x+w/2 && mouseY > y-h/2 && mouseY < y+h/2) {
